@@ -74,6 +74,13 @@
                 <input type="text" name="author" id="author" placeholder="your name"/>
             </div>
             
+              <div class ="input-group">
+                <label for="email">
+                    Your Email
+                </label>
+                <input type="text" name="email" id="email" placeholder="your email"/>
+            </div>
+            
                   <div class ="input-group">
                 <label for="quote">
                     Your quote
