@@ -11,7 +11,7 @@
             <li><a href="/aanmelding">Aanmelden</a></li>
             <li><a href="/contact">Contact</a></li>
             <li><a href="/organisator">organisator</a></li>
-            
+            <li><a href="{{ route('admin.login') }}">Admin</a></li>
         </ul>
         
 

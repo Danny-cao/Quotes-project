@@ -36,6 +36,12 @@
         ]);    
         
         
+    Route::get('/admin/login', [
+            'uses' => 'AdminController@getLogin',
+            'as' => 'admin.login'
+        ]);    
+        
+        
         
 
     
