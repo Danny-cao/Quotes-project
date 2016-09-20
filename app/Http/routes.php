@@ -50,6 +50,7 @@
     
         Route::get('/admin/dashboard', [
         'uses' => 'AdminController@getDashboard',
+        'middleware' => 'auth',
         'as' => 'admin.dashboard'
     ]);     
     

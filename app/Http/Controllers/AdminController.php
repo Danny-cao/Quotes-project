@@ -14,9 +14,6 @@ class AdminController extends Controller
     public function getDashboard()
     {
         
-        if (!Auth::check()){
-            return redirect()->back();
-        }
         $authors = Author::all();
         return view('admin.dashboard', ['authors' => $authors]);
     }
