@@ -42,12 +42,26 @@
         ]);    
         
         
+    Route::post('/admin/login', [
+        'uses' => 'AdminController@postLogin',
+        'as' => 'admin.login'
+    ]);    
+    
+    
+        Route::get('/admin/dashboard', [
+        'uses' => 'AdminController@getDashboard',
+        'as' => 'admin.dashboard'
+    ]);     
+        
+        
         
 
     
     Route::get('/agenda', function() {
         return view ('layouts.agenda.agenda');
     })->name('reserveren');
+    
+    
     
     Route::group(['prefix' => 'reservering'], function() {
        
