@@ -12,6 +12,10 @@
             <li><a href="/contact">Contact</a></li>
             <li><a href="/organisator">organisator</a></li>
             <li><a href="{{ route('admin.login') }}">Admin</a></li>
+            
+            @if (Auth::check())
+                <li><a href="{{ route('admin.logout') }}">Logout</a></li>
+            @endif
         </ul>
         
 

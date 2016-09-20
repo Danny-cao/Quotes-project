@@ -11,16 +11,26 @@ use App\Author;
 class AdminController extends Controller
 {
     
-    public function getDashboard(){
+    public function getDashboard()
+    {
+        
+        if (!Auth::check()){
+            return redirect()->back();
+        }
         $authors = Author::all();
         return view('admin.dashboard', ['authors' => $authors]);
     }
     
     
-    
     public function getLogin()
     {
         return view('admin.login');
+    }
+    
+    public function getLogout()
+    {
+        Auth::logout();
+        return redirect()->route('index');
     }
     
     public function postLogin(Request $request)
